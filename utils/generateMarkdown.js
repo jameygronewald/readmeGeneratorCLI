@@ -31,6 +31,9 @@ const generateMarkdown = data => `# ${data.title}
   ## Tests
   'Run npm test'
 
+  ## Questions
+  Please direct any questions to ${email}, or visit the GitHub repository at https://github.com/${gitUser}/${projectName}.
+
   ## License
   MIT License
 

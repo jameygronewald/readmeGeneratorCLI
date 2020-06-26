@@ -1,3 +1,4 @@
+// Required Modules
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
@@ -6,20 +7,20 @@ const generateMarkdown = require("./utils/generateMarkdown");
 // array of questions for user
 const questions = [
     'What is your full name?',
-    'What is your GitHub username?',
     'What is your email address?',
+    'What is your GitHub username?',
     'What is the title of your project (this will also be the title of your repo)?',
     'Please enter a description for your project:',
-    'How can a user install your application?',
+    'Please enter instructions for installing your app:',
     'How is your application used?',
+    'Choose a license to include in your README:',
+    'What is the current year?',
     'How can others contribute to your project?',
-    'How are tests run in your application?',
-    'What license would you like to use for your project?'
+    'How are tests run in your application?'
 ];
-
+console.log(questions[0]);
 // function to write README file
-function writeToFile(fileName, data) {
-    // use fs package
+const writeToFile = (fileName, data) => {
     fs.writeFile(fileName, generateMarkdown(data), (error) => {
         if (error) throw error;
         else console.log('Success!');
@@ -27,18 +28,17 @@ function writeToFile(fileName, data) {
 };
 
 // function to initialize program
-function init() {
-    // use inquirer package
+const init = () => {
     inquirer
         .prompt([
         {
             type: 'input',
-            message: 'What is your full name?',
+            message: questions[0],
             name: 'name'
         },
         {
             type: 'input',
-            message: 'What is your email address?',
+            message: questions[1],
             name: 'email'
         },
         {
@@ -63,14 +63,19 @@ function init() {
         },
         {
             type: 'input',
-            message: 'How will your app be used?',
+            message: 'How is your application used?',
             name: 'usage'
         },
         {
             type: 'list',
             message: 'Choose a license to include in your README:',
             name: 'license',
-            choices: ['MIT', 'Apache License 2.0', 'GNU GPLv3', 'ISC']
+            choices: ['MIT License', 'Apache License 2.0', 'GNU GPLv3', 'ISC License']
+        },
+        {
+            type: 'input',
+            message: 'What is the current year?',
+            name: 'year'
         },
         {
             type: 'input',
@@ -79,10 +84,10 @@ function init() {
         },
         {
             type: 'input',
-            message: 'Please enter the command to test you app:',
+            message: 'How are tests run in your application?',
             name: 'test'
         }
-    ]).then(userData => writeToFile(`./generatedReadmes/${userData.title}.md`, userData))
+    ]).then(userData => writeToFile(`./generatedReadmes/${userData.title}.md`, userData));
 };
 
 // function call to initialize program

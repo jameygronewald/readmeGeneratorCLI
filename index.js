@@ -1,3 +1,4 @@
+// Required Modules
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
@@ -18,8 +19,7 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
-    // use fs package
+const writeToFile = (fileName, data) => {
     fs.writeFile(fileName, generateMarkdown(data), (error) => {
         if (error) throw error;
         else console.log('Success!');
@@ -27,8 +27,7 @@ function writeToFile(fileName, data) {
 };
 
 // function to initialize program
-function init() {
-    // use inquirer package
+const init = () => {
     inquirer
         .prompt([
         {
@@ -70,7 +69,12 @@ function init() {
             type: 'list',
             message: 'Choose a license to include in your README:',
             name: 'license',
-            choices: ['MIT', 'Apache License 2.0', 'GNU GPLv3', 'ISC']
+            choices: ['MIT License', 'Apache License 2.0', 'GNU GPLv3', 'ISC License']
+        },
+        {
+            type: 'input',
+            message: 'What is the current year?',
+            name: 'year'
         },
         {
             type: 'input',
@@ -82,7 +86,7 @@ function init() {
             message: 'Please enter the command to test you app:',
             name: 'test'
         }
-    ]).then(userData => writeToFile(`./generatedReadmes/${userData.title}.md`, userData))
+    ]).then(userData => writeToFile(`./generatedReadmes/${userData.title}.md`, userData));
 };
 
 // function call to initialize program

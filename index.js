@@ -67,9 +67,10 @@ function init() {
             name: 'usage'
         },
         {
-            type: 'input',
-            message: 'Please enter the command to test you app:',
-            name: 'test'
+            type: 'list',
+            message: 'Choose a license to include in your README:',
+            name: 'license',
+            choices: ['MIT', 'Apache License 2.0', 'GNU GPLv3', 'ISC']
         },
         {
             type: 'input',

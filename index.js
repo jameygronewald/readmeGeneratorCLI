@@ -12,7 +12,7 @@ const questions = [
     'Please enter a description for your project:',
     'How can a user install your application?',
     'How is your application used?',
-    'List full names of any other contributors:',
+    'How can others contribute to your project?',
     'How are tests run in your application?',
     'What license would you like to use for your project?'
 ];
@@ -70,8 +70,18 @@ function init() {
             type: 'input',
             message: 'Please enter the command to test you app:',
             name: 'test'
+        },
+        {
+            type: 'input',
+            message: 'How can others contribute to your project?',
+            name: 'contributing'
+        },
+        {
+            type: 'input',
+            message: 'Please enter the command to test you app:',
+            name: 'test'
         }
-    ]).then(userData => writeToFile('sampleReadme.md', userData))
+    ]).then(userData => writeToFile(`./generatedReadmes/${userData.title}.md`, userData))
 };
 
 // function call to initialize program

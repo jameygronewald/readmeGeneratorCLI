@@ -7,8 +7,9 @@ const generateMarkdown = data => `# ${data.title}
   ## Table of Contents
   * [Installation](#Installation)
   * [Usage](#Usage)
-  * [Credits](#Credits)
+  * [Contributors](#Contributors)
   * [Tests](#Tests)
+  * [Questions](#Questions)
   * [License](#License)
 
   ## Installation
@@ -19,8 +20,8 @@ const generateMarkdown = data => `# ${data.title}
 
   * Visit Github to track changes that were made or to clone the repo: [Github Repo](https://github.com/${data.gitName}/${data.title}).
 
-  ## Contributors
-  I, ${data.name}, was the sole contributor on the project ${data.title}.
+  ## Contributing
+  ${data.contributing}
 
   ## Tests
   Run this command in your command line: ${data.test}

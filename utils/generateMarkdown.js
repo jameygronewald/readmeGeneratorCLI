@@ -12,27 +12,21 @@ const generateMarkdown = data => `# ${data.title}
   * [License](#License)
 
   ## Installation
-  1. Clone the Github Repository [here](https://github.com/jameygronewald/passwordGenerator).
-  2. Open index.html in browser.
+  Run the following command to install the app: ${data.install}
 
   ## Usage
-  * Visit the deployed app: [Password Generator](https://jameygronewald.github.io/passwordGenerator/)
-      1. Click "Generate Password" button to begin selecting preferences for randomly generated password
-      2. Follow the prompts given by the app to select desired character sets and length of randomly generated password
-      3. Watch as randomly generated password is displayed. Copy password to clipboard for personal use if desired.
-      4. Click "Generate Password" button again and again to generate as many passwords as desired.
+  ${data.usage}
 
-
-  * Visit Github to track changes that were made or to clone the repo: [Github Repo](https://github.com/jameygronewald/passwordGenerator).
+  * Visit Github to track changes that were made or to clone the repo: [Github Repo](https://github.com/${data.gitName}/${data.title}).
 
   ## Contributors
-  I, Jamey Gronewald, was the sole contributor on this project.
+  I, ${data.name}, was the sole contributor on the project ${data.title}.
 
   ## Tests
-  'Run npm test'
+  Run this command in your command line: ${data.test}
 
   ## Questions
-  Please direct any questions to EMAIL, or visit the GitHub repository at https://github.com/GIT USERNAME/${data.title}.
+  Please direct any questions to ${data.email}, or visit the GitHub repository at https://github.com/${data.gitName}/${data.title}.
 
   ## License
   MIT License

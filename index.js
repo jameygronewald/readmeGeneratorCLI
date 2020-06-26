@@ -2,7 +2,6 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
 
-console.log(generateMarkdown());
 
 // array of questions for user
 const questions = [
@@ -20,12 +19,45 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-}
+    // use fs package
+    fs.writeFile(fileName, generateMarkdown(data), (error) => {
+        if (error) throw error;
+        else console.log('Success!');
+    });
+};
 
 // function to initialize program
 function init() {
-
-}
+    // use inquirer package
+    inquirer
+        .prompt([
+        {
+            type: 'input',
+            message: 'What is your full name?',
+            name: 'name'
+        },
+        {
+            type: 'input',
+            message: 'What is your email address?',
+            name: 'email'
+        },
+        {
+            type: 'input',
+            message: 'What is your GitHub username?',
+            name: 'gitName'
+        },
+        {
+            type: 'input',
+            message: 'What is the title of your project?',
+            name: 'title'
+        },
+        {
+            type: 'input',
+            message: 'Please enter a description for your project:',
+            name: 'description'
+        }
+    ]).then(userData => writeToFile('sampleReadme.md', userData))
+};
 
 // function call to initialize program
 init();

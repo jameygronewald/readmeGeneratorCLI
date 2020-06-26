@@ -1,7 +1,7 @@
-# slimeMaker
+# project1
   
   ## Description
-  Gracie and I make slime with this app
+  eating food
 
   ## Table of Contents
   * [Installation](#Installation)
@@ -11,26 +11,26 @@
   * [License](#License)
 
   ## Installation
-  Run the following command to install the app: Mix weird stuff together to make slime
+  Run the following command to install the app: go to store
 
   ## Usage
-  Show others the best way to make slime like us
+  making pasta
 
-  * Visit Github to track changes that were made or to clone the repo: [Github Repo](https://github.com/maryaliceolsen/slimeMaker).
+  * Visit Github to track changes that were made or to clone the repo: [Github Repo](https://github.com/jameygronewald/project1).
 
   ## Contributors
-  I, Mary Olsen, was the sole contributor on the project slimeMaker.
+  I, jamey, was the sole contributor on the project project1.
 
   ## Tests
-  Run this command in your command line: isItSlimey.test.js
+  Run this command in your command line: test.js
 
   ## Questions
-  Please direct any questions to maryy.alice@yahoo.com, or visit the GitHub repository at https://github.com/maryaliceolsen/slimeMaker.
+  Please direct any questions to j@j.com, or visit the GitHub repository at https://github.com/jameygronewald/project1.
 
   ## License
   MIT License
 
-  Copyright (c) [2020] [Mary Olsen]
+  Copyright (c) [2020] [jamey]
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

@@ -7,12 +7,12 @@ const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
     'What is your full name?',
     'What is your GitHub username?',
-    'What is your email?',
-    'What is the title of your project (this will also be the name of your repo)?',
+    'What is your email address?',
+    'What is the title of your project (this will also be the title of your repo)?',
     'Please enter a description for your project:',
     'How can a user install your application?',
     'How is your application used?',
-    'List full names of any other contributors:',
+    'How can others contribute to your project?',
     'How are tests run in your application?',
     'What license would you like to use for your project?'
 ];
@@ -48,15 +48,40 @@ function init() {
         },
         {
             type: 'input',
-            message: 'What is the title of your project?',
+            message: 'What is the title of your project (this will also be the title of your repo)?',
             name: 'title'
         },
         {
             type: 'input',
             message: 'Please enter a description for your project:',
             name: 'description'
+        },
+        {
+            type: 'input',
+            message: 'Please enter instructions for installing your app:',
+            name: 'install'
+        },
+        {
+            type: 'input',
+            message: 'How will your app be used?',
+            name: 'usage'
+        },
+        {
+            type: 'input',
+            message: 'Please enter the command to test you app:',
+            name: 'test'
+        },
+        {
+            type: 'input',
+            message: 'How can others contribute to your project?',
+            name: 'contributing'
+        },
+        {
+            type: 'input',
+            message: 'Please enter the command to test you app:',
+            name: 'test'
         }
-    ]).then(userData => writeToFile('sampleReadme.md', userData))
+    ]).then(userData => writeToFile(`./generatedReadmes/${userData.title}.md`, userData))
 };
 
 // function call to initialize program

@@ -1,23 +1,22 @@
-# README Generator CLI
-A command line interface for easily creating a README Markdown file for a GitHub repository.
-  
+# readmeGeneratorCLI
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Description
-  A CLI that takes user input and dynamically generates a README file for a project. Uses node.js, the Inquirer npm package, and the command line to take in user input and add a Markdown file to user's file structure.
+  A CLI that takes user input and dynamically generates a README.md file for a project. Uses node.js and the command line.
 
   ## Table of Contents
   * [Installation](#Installation)
   * [Usage](#Usage)
-  * [Contributing](#Contributing)
-  * [License](#License)
+  * [Contributors](#Contributors)
+  * [Tests](#Tests)
   * [Questions](#Questions)
+  * [License](#License)
 
   ## Installation
-  Clone the repo [here](http://www.github.com/jameygronewald/readmeGeneratorCLI) and run  ```npm install```
+  Run the following command to install the app: Clone the repo HERE and run ```npm install```
 
   ## Usage
-  Once you have repo cloned and dependencies installed, run  ```node index.js``` in the command line and answer the prompts to generate a Markdown file with information you provide.
+  Once you have repo cloned and dependencies installed, run ```node index.js``` in the command line and answer the prompts to generate a README.md with information you provide.
 
   * Visit Github to track changes that were made or to clone the repo: [Github Repo](https://github.com/jameygronewald/readmeGeneratorCLI).
 
@@ -47,5 +46,8 @@ A command line interface for easily creating a README Markdown file for a GitHub
       OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
       SOFTWARE.
   
+  ## Tests
+  Run this command in your command line: Run ```npm test```
+
   ## Questions
-  Please direct any questions to jrgronewald@gmail.com, or visit the GitHub repository at https://github.com/jameygronewald/readmeGeneratorCLI.
+  Please direct any questions to jamey@jamey.com, or visit the GitHub repository at https://github.com/jameygronewald/readmeGeneratorCLI.

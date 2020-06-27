@@ -9,7 +9,7 @@ const questions = [
     'What is your full name?',
     'What is your email address?',
     'What is your GitHub username?',
-    'What is the title of your project (this will also be the title of your repo)?',
+    'What is the title of your project without any spaces (this will also be the title of your repo)?',
     'Please enter a description for your project:',
     'Please enter instructions for installing your app:',
     'How is your application used?',
@@ -48,7 +48,7 @@ const init = () => {
         },
         {
             type: 'input',
-            message: 'What is the title of your project (this will also be the title of your repo)?',
+            message: 'What is the title of your project without any spaces (this will also be the title of your repo)?',
             name: 'title'
         },
         {
@@ -70,7 +70,7 @@ const init = () => {
             type: 'list',
             message: 'Choose a license to include in your README:',
             name: 'license',
-            choices: ['MIT License', 'Apache License 2.0', 'GNU GPLv3', 'ISC License']
+            choices: ['MIT', 'Apache License 2.0', 'GNU GPLv3', 'ISC License']
         },
         {
             type: 'input',
@@ -89,6 +89,5 @@ const init = () => {
         }
     ]).then(userData => writeToFile(`./generatedReadmes/${userData.title}.md`, userData));
 };
-
 // function call to initialize program
 init();

@@ -43,48 +43,48 @@ const init = () => {
         },
         {
             type: 'input',
-            message: 'What is your GitHub username?',
+            message: questions[2],
             name: 'gitName'
         },
         {
             type: 'input',
-            message: 'What is the title of your project without any spaces (this will also be the title of your repo)?',
+            message: questions[3],
             name: 'title'
         },
         {
             type: 'input',
-            message: 'Please enter a description for your project:',
+            message: questions[4],
             name: 'description'
         },
         {
             type: 'input',
-            message: 'Please enter instructions for installing your app:',
+            message: questions[5],
             name: 'install'
         },
         {
             type: 'input',
-            message: 'How is your application used?',
+            message: questions[6],
             name: 'usage'
         },
         {
             type: 'list',
-            message: 'Choose a license to include in your README:',
+            message: questions[7],
             name: 'license',
             choices: ['MIT', 'Apache License 2.0', 'GNU GPLv3', 'ISC License']
         },
         {
             type: 'input',
-            message: 'What is the current year?',
+            message: questions[8],
             name: 'year'
         },
         {
             type: 'input',
-            message: 'How can others contribute to your project?',
+            message: questions[9],
             name: 'contributing'
         },
         {
             type: 'input',
-            message: 'How are tests run in your application?',
+            message: questions[10],
             name: 'test'
         }
     ]).then(userData => writeToFile(`./generatedReadmes/${userData.title}.md`, userData));
